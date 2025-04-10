@@ -1,0 +1,17 @@
+{
+  "name": "rust",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "runArgs": [
+    "--userns=keep-id"
+    //"--group-add=keep-groups"
+    //"--device=/dev/bus/usb"
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/rust:1": {
+      "targets": [
+        "thumbv8m.main-none-eabihf"
+      ]
+    }
+  },
+  "portCreateCommand": ".devcontainer/setup.sh"
+}
